@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datapad Responsive</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', monospace;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .datapad-container {
+            width: 95%;
+            height: 90vh;
+            max-width: 100%;
+            margin: 20px auto;
+            position: relative;
+            background-color: #000;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+        }
+        
+        .datapad-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid #ff3333;
+            border-radius: 15px;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .datapad-screen {
+            background-color: #1e4b70;
+            border-radius: 8px;
+            padding: 15px;
+            color: #b8d3e9;
+            position: relative;
+            font-size: 14px;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+            margin: 20px;
+            min-height: 500px;
+            height: 95%;
+             box-sizing: border-box;
+        }
+        
+        .datapad-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        
+        .datapad-header {
+            margin-bottom: 10px;
+        }
+        
+        .datapad-section {
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .datapad-section:nth-child(1) {
+            font-size: 12px;
+            overflow-y: auto;
+            max-height: 100%;
+        }
+        
+        /* Estilos para el contenido markdown */
+        .info-section h1 {
+            font-size: 14px;
+            margin: 10px 0 5px 0;
+        }
+        
+        .info-section h2 {
+            font-size: 13px;
+            margin: 8px 0 3px 0;
+            text-decoration: none;
+        }
+        
+        .info-section strong {
+            font-weight: bold;
+        }
+        
+        .info-section ul {
+            margin: 3px 0;
+            padding-left: 20px;
+        }
+        
+        .info-section li {
+            margin-bottom: 3px;
+        }
+        
+        h2 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        
+        p {
+            margin: 5px 0;
+        }
+        
+        
+        @media (max-width: 768px) {
+            .datapad-screen {
+                font-size: 12px;
+                min-height: 400px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .datapad-container {
+                width: 95%;
+                padding: 10px;
+            }
+            
+            .datapad-screen {
+                padding: 10px;
+                min-height: 300px;
+            }
+            
+            .info-section h1 {
+                font-size: 13px;
+            }
+            
+            .info-section h2 {
+                font-size: 12px;
+            }
+        }
+        .portada {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.datapad-title {
+    font-size: 24px;
+    color: #ccc;
+    text-shadow: 1px 1px 2px #000, -1px -1px 2px #444;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.button-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 50%; /* Botones empiezan desde el centro */
+}
+
+.datapad-button {
+    background-color: #333;
+    color: #b8d3e9;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    width: calc(100% - 3px); /* Del centro hasta el borde derecho, con padding */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.datapad-button:hover {
+    background-color: #b8d3e9;
+    color: #1e4b70;
+    border-color: #ff3333;
+    box-shadow: 0 0 12px #ff3333;
+}
+    </style>
+</head>
+<body>
+    <div class="datapad-container">
+        <div class="datapad-border"></div>
+        <div class="datapad-screen">
+            <div class="datapad-content">
+                <div class="datapad-section info-section">
+                   <!-- HTML dentro de .datapad-content -->
+<div class="datapad-section portada">
+    <h1 class="datapad-title">Operación “Cambio de Guardián”</h1>
+    <div class="button-grid">
+        <a href="situacion.html" class="datapad-button">Situación</a>
+        <a href="mision.html" class="datapad-button">Misión</a>
+        <a href="custos.html" class="datapad-button">Custos Delirii</a>
+        <a href="comandos.html" class="datapad-button">Comandos y Señales</a>
+        <a href="organigrama.html" class="datapad-button">Organigrama de Seguridad</a>
+        <a href="responsabilidades.html" class="datapad-button">Responsabilidades y Consecuencias Probables</a>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
